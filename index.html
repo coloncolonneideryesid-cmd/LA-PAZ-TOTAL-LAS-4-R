@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>Seguridad Total - Las 4 R - Paloma 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#09152a;--navy2:#0e2a50;--gold:#c8a020;--gold2:#e8c040;--red:#c02820;--white:#fff;--text:#d0dcea;--gray:#7a8fa8;--c1:#2563c4;--c2:#1a8c4e;--c3:#c47a10;--c4:#7c2caa}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+body{background:var(--navy);color:var(--white);font-family:"Open Sans",sans-serif;overflow-x:hidden}
+.hero{position:relative;overflow:hidden;background:linear-gradient(170deg,#0e2a50 0%,#09152a 60%)}
+.hero-img{width:100%;display:block;max-height:460px;object-fit:contain;object-position:center center;opacity:.88;background:linear-gradient(160deg,#0e2a50,#09152a)}
+.hero-overlay{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(to top,var(--navy) 0%,rgba(9,21,42,.88) 35%,rgba(9,21,42,.25) 70%,transparent 100%);padding:28px 22px 24px}
+.logo-img{height:42px;display:block;margin-bottom:14px;filter:brightness(0) invert(1);opacity:.95}
+.hero h1{font-family:"Montserrat",sans-serif;font-weight:900;font-size:clamp(38px,12vw,60px);line-height:.92;letter-spacing:1px;text-transform:uppercase}
+.hero h1 em{color:var(--gold2);font-style:normal;display:block}
+.hero-slogan{margin-top:14px;background:var(--gold);display:inline-block;padding:8px 16px}
+.hero-slogan p{font-family:"Montserrat",sans-serif;font-weight:800;font-size:11px;color:var(--navy);letter-spacing:.5px;line-height:1.3;text-transform:uppercase}
+.hero-promise{margin-top:12px;font-size:12px;color:var(--gray);font-style:italic;line-height:1.5}
+.nav-strip{display:grid;grid-template-columns:repeat(4,1fr);border-top:2px solid var(--gold);border-bottom:1px solid rgba(255,255,255,.07);background:#08172e}
+.nav-btn{padding:12px 6px;background:none;border:none;border-right:1px solid rgba(255,255,255,.06);color:var(--gray);cursor:pointer;font-family:"Montserrat",sans-serif;font-size:8px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;text-align:center;line-height:1.35;transition:all .2s}
+.nav-btn:last-child{border-right:none}.nav-btn:hover,.nav-btn:active{background:rgba(200,160,32,.1);color:var(--gold2)}
+.nb{font-size:18px;display:block;margin-bottom:4px}
+.plan-intro{padding:22px 20px;background:var(--navy2);border-bottom:1px solid rgba(255,255,255,.06)}
+.plan-intro h2{font-family:"Montserrat",sans-serif;font-weight:900;font-size:18px;color:var(--white);text-transform:uppercase;letter-spacing:1px;margin-bottom:8px}
+.plan-intro p{font-size:13px;color:var(--text);line-height:1.65;font-weight:300}
+.plan-intro strong{color:var(--gold2);font-weight:600}
+.rs{padding-bottom:8px}
+.rb{padding:26px 20px 16px;position:relative;overflow:hidden;border-left:5px solid var(--rc,#fff)}
+.rb::after{content:attr(data-n);position:absolute;right:-6px;top:-4px;font-family:"Montserrat",sans-serif;font-weight:900;font-size:110px;opacity:.04;line-height:1;color:var(--white);pointer-events:none}
+.rtag{font-family:"Montserrat",sans-serif;font-size:9px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--rc,#fff);display:block;margin-bottom:6px;opacity:.85}
+.rtit{font-family:"Montserrat",sans-serif;font-weight:900;font-size:clamp(28px,8vw,38px);line-height:.95;text-transform:uppercase;color:var(--white);letter-spacing:.5px}
+.rdesc{font-size:12px;color:var(--gray);margin-top:8px;line-height:1.55;font-style:italic;font-weight:300}
+.rpr{margin:14px 20px 0;padding:12px 14px;border-left:3px solid var(--rc,#fff);background:rgba(255,255,255,.03)}
+.rpr p{font-size:12px;color:var(--text);line-height:1.6;font-style:italic}
+.rpr strong{color:var(--gold2);font-weight:600;font-style:normal}
+.ln{margin:14px 16px 0;border:1px solid rgba(255,255,255,.08);background:rgba(255,255,255,.02);border-radius:3px;overflow:hidden}
+.lnlast{margin-bottom:16px}
+.lnh{padding:13px 16px;display:flex;align-items:flex-start;gap:10px;background:rgba(255,255,255,.04);border-bottom:1px solid rgba(255,255,255,.05)}
+.lnb{font-family:"Montserrat",sans-serif;font-size:8px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:4px 8px;flex-shrink:0;margin-top:2px;border-radius:2px;background:color-mix(in srgb,var(--rc) 18%,transparent);color:var(--rc,#fff);white-space:nowrap}
+.lnt{font-family:"Montserrat",sans-serif;font-size:13px;font-weight:700;line-height:1.35;color:var(--white);text-transform:uppercase;letter-spacing:.2px}
+.aw{border-bottom:1px solid rgba(255,255,255,.04)}.aw:last-child{border-bottom:none}
+.ah{display:flex;align-items:flex-start;gap:10px;padding:13px 16px;cursor:pointer;background:transparent;width:100%;border:none;text-align:left;transition:background .18s}
+.ah:hover{background:rgba(255,255,255,.03)}
+.an{font-family:"Montserrat",sans-serif;font-size:9px;font-weight:700;letter-spacing:.5px;flex-shrink:0;margin-top:2px;color:var(--rc,#fff);opacity:.65;min-width:38px}
+.at{font-size:13px;line-height:1.55;color:var(--white);font-weight:600;flex:1;text-align:left}
+.aa{font-size:11px;color:var(--gray);flex-shrink:0;margin-top:3px;transition:transform .25s;opacity:.6}
+.aw.open .aa{transform:rotate(180deg)}
+.ab{max-height:0;overflow:hidden;transition:max-height .4s ease}.aw.open .ab{max-height:3000px}
+.ti{padding:4px 16px 16px 54px}
+.tl{font-family:"Montserrat",sans-serif;font-size:8px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--rc,#fff);opacity:.7;margin-bottom:10px;display:block}
+.td{display:flex;gap:8px;align-items:flex-start;margin-bottom:8px}.td:last-child{margin-bottom:0}
+.dot{width:5px;height:5px;border-radius:50%;background:var(--rc,#fff);opacity:.5;flex-shrink:0;margin-top:6px}
+.tx{font-size:12px;line-height:1.65;color:rgba(255,255,255,.72);font-weight:300}
+.tn{font-size:10px;color:var(--gold);font-style:italic;margin-top:8px;padding-top:8px;border-top:1px solid rgba(255,255,255,.06)}
+.rdiv{height:1px;background:linear-gradient(90deg,transparent,rgba(200,160,32,.18),transparent);margin:14px 0 4px}
+footer{padding:28px 20px 48px;border-top:2px solid var(--gold);background:#08172e;text-align:center}
+footer img{height:36px;filter:brightness(0) invert(1);opacity:.65;margin-bottom:12px;display:block;margin-left:auto;margin-right:auto}
+footer p{font-family:"Montserrat",sans-serif;font-size:9px;font-weight:600;letter-spacing:2px;color:var(--gray);text-transform:uppercase;line-height:2}
+footer strong{color:var(--gold)}
+.r1{--rc:var(--c1)}.r2{--rc:var(--c2)}.r3{--rc:var(--c3)}.r4{--rc:var(--c4)}
+</style>
+</head>
+<body>
+<header class="hero">
+<img class="hero-img" src="https://palomapresidente.com.co/images/paloma-valencia-presidente-02.jpg" alt="Paloma Valencia" onerror="this.style.display='none'">
+<div class="hero-overlay">
+<img class="logo-img" src="https://palomapresidente.com.co/images/logo-paloma 2026.png" alt="Paloma 2026" onerror="this.style.display='none'">
+<h1>SEGURIDAD<em>TOTAL</em></h1>
+<div class="hero-slogan"><p>Autoridad y firmeza:<br>Colombia segura para el desarrollo</p></div>
+<p class="hero-promise">"Que vivir sin miedo sea una realidad" 2026-2030</p>
+</div>
+</header>
+<nav class="nav-strip">
+<button class="nav-btn" onclick="document.getElementById('r1').scrollIntoView({behavior:'smooth'})"><span class="nb">💰</span>REDUCIR<br>INGRESOS</button>
+<button class="nav-btn" onclick="document.getElementById('r2').scrollIntoView({behavior:'smooth'})"><span class="nb">🛡️</span>ROBUSTECER<br>FUERZA</button>
+<button class="nav-btn" onclick="document.getElementById('r3').scrollIntoView({behavior:'smooth'})"><span class="nb">🤝</span>RE-ENAM.<br>COMUNID.</button>
+<button class="nav-btn" onclick="document.getElementById('r4').scrollIntoView({behavior:'smooth'})"><span class="nb">⚖️</span>RESTABLECER<br>LEGALIDAD</button>
+</nav>
+<div class="plan-intro">
+<h2>Las Cuatro R - Vivir Sin Miedo</h2>
+<p>Un plan integral para que Colombia recupere la <strong>autoridad, el orden y la seguridad</strong> en todos sus territorios. Las 4R atacan simultáneamente las finanzas del crimen, la debilidad institucional y la pérdida de legitimidad estatal. <strong>Toca cada acción para ver las tareas esenciales.</strong></p>
+</div>
+<section class="rs r1" id="r1">
+<div class="rb" data-n="R1"><span class="rtag">R - 01</span><h2 class="rtit">💰 REDUCIR<br>INGRESOS DE<br>LOS ILEGALES</h2><p class="rdesc">Golpe a sus finanzas. Sin rentas ilegales no existe poder criminal sostenible.</p></div>
+<div class="rpr"><p><strong>Principio rector:</strong> "Sin rentas ilegales no existe poder criminal capaz de desafiar de forma sostenida la autoridad del Estado."</p></div>
+<div class="ln">
+<div class="lnh"><span class="lnb">Línea 1</span><div class="lnt">Superioridad Informacional y Asfixia Financiera del Crimen Organizado</div></div>
+<div class="aw">
+<button class="ah" onclick="toggle(this)"><span class="an">1.1</span><span class="at">Identificar, caracterizar y visibilizar las organizaciones criminales para su persecución penal</span><span class="aa">▼</span></button>
+<div class="ab"><div class="ti"><span class="tl">Tareas esenciales</span>
+<div class="td"><div class="dot"></div><p class="tx">Crear un sistema nacional integrado de caracterización de organizaciones criminales.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Integrar bases de datos interinstitucionales sobre estructuras criminales.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Consolidar mapas dinámicos de presencia territorial de economías ilegales.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Identificar redes criminales transnacionales y su articulación con estructuras locales.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Incorporar análisis prospectivo sobre evolución del crimen organizado.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Institucionalizar un observatorio nacional de economías criminales.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Integrar inteligencia territorial, financiera y criminal para anticipar amenazas.</p></div>
+</div></div>
+</div><div class="aw">
+<button class="ah" onclick="toggle(this)"><span class="an">1.2</span><span class="at">Fortalecer y expandir la capacidad investigativa e inteligencia del Estado</span><span class="aa">▼</span></button>
+<div class="ab"><div class="ti"><span class="tl">Tareas esenciales</span>
+<div class="td"><div class="dot"></div><p class="tx">Integrar capacidades de inteligencia estratégica, criminal y financiera del Estado.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Fortalecer coordinación entre inteligencia policial, militar y judicial.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Incrementar capacidades de análisis de redes criminales complejas.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Incorporar tecnologías de analítica avanzada e inteligencia artificial para análisis criminal.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Fortalecer formación especializada en investigación contra economías ilícitas.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Desarrollar capacidades de monitoreo permanente de amenazas criminales emergentes.</p></div>
+</div></div>
+</div><div class="aw">
+<button class="ah" onclick="toggle(this)"><span class="an">1.3</span><span class="at">Debilitar economías criminales estratégicas y sus cadenas de valor</span><span class="aa">▼</span></button>
+<div class="ab"><div class="ti"><span class="tl">Tareas esenciales</span>
+<div class="td"><div class="dot"></div><p class="tx">Identificar estructuras criminales que controlan cadenas de narcotráfico y minería ilegal.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Desarticular redes logísticas utilizadas para transporte y distribución de drogas.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Intervenir centros de acopio, procesamiento y exportación de economías ilícitas.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Desmantelar infraestructuras criminales asociadas a minería ilegal.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Debilitar redes de abastecimiento de insumos para actividades ilícitas.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Neutralizar corredores estratégicos utilizados por organizaciones criminales.</p></div>
+</div></div>
+</div><div class="aw">
+<button class="ah" onclick="toggle(this)"><span class="an">1.4</span><span class="at">Fortalecer mecanismos de detección e interrupción de flujos de lavado de activos</span><span class="aa">▼</span></button>
+<div class="ab"><div class="ti"><span class="tl">Tareas esenciales</span>
+<div class="td"><div class="dot"></div><p class="tx">Fortalecer la trazabilidad financiera de recursos provenientes de economías ilegales.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Integrar capacidades de investigación financiera entre autoridades judiciales y organismos de inteligencia.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Identificar redes de lavado de activos vinculadas al crimen organizado.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Intensificar procesos de extinción de dominio sobre bienes provenientes de actividades ilícitas.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Fortalecer la supervisión de sectores económicos vulnerables al lavado de activos.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Implementar sistemas de alerta temprana frente a operaciones financieras sospechosas.</p></div>
+</div></div>
+</div><div class="aw">
+<button class="ah" onclick="toggle(this)"><span class="an">1.5</span><span class="at">Controlar y neutralizar los flujos de migración irregular asociados a economías criminales</span><span class="aa">▼</span></button>
+<div class="ab"><div class="ti"><span class="tl">Tareas esenciales</span>
+<div class="td"><div class="dot"></div><p class="tx">Identificar redes criminales que facilitan migración irregular.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Fortalecer sistemas de control migratorio frente a estructuras criminales transnacionales.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Desarticular organizaciones dedicadas al tráfico ilícito de migrantes.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Fortalecer cooperación internacional contra redes de trata de personas.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Integrar inteligencia migratoria con sistemas de seguridad nacional.</p></div>
+</div></div>
+</div><div class="aw">
+<button class="ah" onclick="toggle(this)"><span class="an">1.6</span><span class="at">Fortalecer, detectar y perseguir las modalidades de ciberdelito</span><span class="aa">▼</span></button>
+<div class="ab"><div class="ti"><span class="tl">Tareas esenciales</span>
+<div class="td"><div class="dot"></div><p class="tx">Fortalecer capacidades nacionales para investigación de delitos informáticos.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Desarrollar sistemas de monitoreo de amenazas digitales vinculadas al crimen organizado.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Desarticular redes criminales que operan en entornos digitales.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Proteger infraestructuras críticas frente a ataques cibernéticos.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Fortalecer cooperación internacional contra cibercrimen.</p></div>
+</div></div>
+</div><div class="aw">
+<button class="ah" onclick="toggle(this)"><span class="an">1.7</span><span class="at">Ejercer liderazgo soberano en la agenda internacional antidrogas con responsabilidad compartida</span><span class="aa">▼</span></button>
+<div class="ab"><div class="ti"><span class="tl">Tareas esenciales</span>
+<div class="td"><div class="dot"></div><p class="tx">Posicionar a Colombia como actor líder en cooperación internacional contra crimen organizado.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Impulsar acuerdos regionales para enfrentar economías criminales transnacionales.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Fortalecer mecanismos multilaterales de cooperación en seguridad.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Promover estrategias hemisféricas contra narcotráfico.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Desarrollar agendas conjuntas de inteligencia y operaciones contra redes criminales.</p></div>
+</div></div>
+</div><div class="aw">
+<button class="ah" onclick="toggle(this)"><span class="an">1.8</span><span class="at">Fortalecer integralmente las capacidades del SAE, DNI y UIAF bajo mandato presidencial directo</span><span class="aa">▼</span></button>
+<div class="ab"><div class="ti"><span class="tl">Tareas esenciales</span>
+<div class="td"><div class="dot"></div><p class="tx">Integrar capacidades institucionales de inteligencia financiera del Estado.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Fortalecer coordinación entre entidades responsables de administración de bienes incautados.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Consolidar mecanismos de intercambio de información entre entidades estratégicas.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Optimizar gestión de activos incautados a organizaciones criminales.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Fortalecer trazabilidad financiera de recursos ilícitos.</p></div>
+</div></div>
+</div><div class="aw">
+<button class="ah" onclick="toggle(this)"><span class="an">1.9</span><span class="at">Reestructurar el Plan Nacional de Inteligencia</span><span class="aa">▼</span></button>
+<div class="ab"><div class="ti"><span class="tl">Tareas esenciales</span>
+<div class="td"><div class="dot"></div><p class="tx">Redefinir prioridades estratégicas del sistema nacional de inteligencia.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Incorporar análisis prospectivo de amenazas criminales emergentes.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Integrar inteligencia territorial, económica y tecnológica.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Fortalecer mecanismos de coordinación interinstitucional en inteligencia.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Orientar capacidades del sistema de inteligencia hacia economías criminales.</p></div>
+</div></div>
+</div><div class="aw">
+<button class="ah" onclick="toggle(this)"><span class="an">1.10</span><span class="at">Fortalecer la cooperación internacional en inteligencia</span><span class="aa">▼</span></button>
+<div class="ab"><div class="ti"><span class="tl">Tareas esenciales</span>
+<div class="td"><div class="dot"></div><p class="tx">Fortalecer intercambio de inteligencia con países aliados.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Desarrollar plataformas seguras de intercambio de información estratégica.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Integrar redes internacionales de cooperación contra crimen organizado.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Fortalecer capacidades de investigación conjunta con agencias internacionales.</p></div>
+</div></div>
+</div>
+</div><div class="ln lnlast">
+<div class="lnh"><span class="lnb">Línea 2</span><div class="lnt">Defensa del Patrimonio Natural, Seguridad Ambiental y Sostenibilidad Territorial</div></div>
+<div class="aw">
+<button class="ah" onclick="toggle(this)"><span class="an">1.2.1</span><span class="at">Fortalecer la articulación interinstitucional para el control de delitos ambientales</span><span class="aa">▼</span></button>
+<div class="ab"><div class="ti"><span class="tl">Tareas esenciales</span>
+<div class="td"><div class="dot"></div><p class="tx">Reactivación de las burbujas ambientales en el territorio.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Articular capacidades de la Fuerza Pública con autoridades regionales y municipales para prevención de delitos ambientales.</p></div>
+</div></div>
+</div><div class="aw">
+<button class="ah" onclick="toggle(this)"><span class="an">1.2.2</span><span class="at">Suministrar información de inteligencia al SINA para la lucha contra delitos ambientales</span><span class="aa">▼</span></button>
+<div class="ab"><div class="ti"><span class="tl">Tareas esenciales</span>
+<div class="td"><div class="dot"></div><p class="tx">Establecer mesas interagenciales para el suministro de información de inteligencia ambiental.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Establecer canales para el suministro de imágenes satelitales sobre zonas críticas.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Identificar causales, focos y agentes en la cadena de deforestación y delitos ambientales.</p></div>
+</div></div>
+</div><div class="aw">
+<button class="ah" onclick="toggle(this)"><span class="an">1.2.3</span><span class="at">Generar capacidades para determinar cadenas transnacionales vinculadas a delitos ambientales</span><span class="aa">▼</span></button>
+<div class="ab"><div class="ti"><span class="tl">Tareas esenciales</span>
+<div class="td"><div class="dot"></div><p class="tx">Elaborar manuales operacionales para el control de delitos ambientales.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Promover acuerdos de cooperación internacional para desarticular organizaciones criminales ambientales.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Participación activa en redes multilaterales de buenas prácticas.</p></div>
+</div></div>
+</div><div class="aw">
+<button class="ah" onclick="toggle(this)"><span class="an">1.2.4</span><span class="at">Articular capacidades con CONALDEF para fortalecer la lucha contra la deforestación</span><span class="aa">▼</span></button>
+<div class="ab"><div class="ti"><span class="tl">Tareas esenciales</span>
+<div class="td"><div class="dot"></div><p class="tx">Gestionar recursos para fortalecer capacidades operativas de inteligencia en líneas estratégicas de CONALDEF.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Desarrollar operaciones conjuntas de control, vigilancia e inteligencia contra actividades ilícitas asociadas a la deforestación.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Implementar sistemas de análisis e intercambio de información entre entidades del Estado.</p></div>
+</div></div>
+</div><div class="aw">
+<button class="ah" onclick="toggle(this)"><span class="an">1.2.5</span><span class="at">Incorporar en la política ambiental del sector Defensa lineamientos para el control de la deforestación</span><span class="aa">▼</span></button>
+<div class="ab"><div class="ti"><span class="tl">Tareas esenciales</span>
+<div class="td"><div class="dot"></div><p class="tx">Definir y formalizar los roles de la Fuerza Pública en prevención, protección y monitoreo de la deforestación.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Incorporar lineamientos operacionales de inteligencia para el control de delitos ambientales.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Fortalecer los mecanismos de articulación interinstitucional entre sector Defensa y autoridades ambientales.</p></div>
+</div></div>
+</div><div class="aw">
+<button class="ah" onclick="toggle(this)"><span class="an">1.2.6</span><span class="at">Fortalecer capacidades para generar alertas tempranas de deforestación e inestabilidad ambiental</span><span class="aa">▼</span></button>
+<div class="ab"><div class="ti"><span class="tl">Tareas esenciales</span>
+<div class="td"><div class="dot"></div><p class="tx">Creación de un Centro de Inteligencia Ambiental.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Desarrollar protocolos de actuación para la atención oportuna de alertas tempranas.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Fortalecer capacidades tecnológicas mediante sistemas de monitoreo satelital.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Capacitar al personal en uso de tecnologías de monitoreo ambiental y gestión de alertas tempranas.</p></div>
+</div></div>
+</div><div class="aw">
+<button class="ah" onclick="toggle(this)"><span class="an">1.2.7</span><span class="at">Reactivación de proyectos ambientales enfocados al desarrollo resiliente comunitario</span><span class="aa">▼</span></button>
+<div class="ab"><div class="ti"><span class="tl">Tareas esenciales</span>
+<div class="td"><div class="dot"></div><p class="tx">Promover programas de reforestación y restauración ecológica.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Impulsar proyectos productivos sostenibles con comunidades rurales para la conservación de ecosistemas.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Apoyar el desarrollo de negocios verdes comunitarios que reduzcan presiones sobre recursos naturales.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Reimplementar el programa Fe en Colombia para fortalecer la institucionalidad del Estado.</p></div>
+</div></div>
+</div><div class="aw">
+<button class="ah" onclick="toggle(this)"><span class="an">1.2.8</span><span class="at">Fortalecer campañas ambientales mediante programas de consolidación en el territorio</span><span class="aa">▼</span></button>
+<div class="ab"><div class="ti"><span class="tl">Tareas esenciales</span>
+<div class="td"><div class="dot"></div><p class="tx">Diseñar e implementar campañas de sensibilización ambiental dirigidas a comunidades en territorios priorizados.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Fortalecer campañas de cultura ambiental mediante medios institucionales y estrategias pedagógicas itinerantes.</p></div>
+</div></div>
+</div><div class="aw">
+<button class="ah" onclick="toggle(this)"><span class="an">1.2.9</span><span class="at">Fortalecer procesos de judicialización en operaciones militares y policiales contra delitos ambientales</span><span class="aa">▼</span></button>
+<div class="ab"><div class="ti"><span class="tl">Tareas esenciales</span>
+<div class="td"><div class="dot"></div><p class="tx">Establecer mecanismos de articulación con la Fiscalía General para investigación de delitos ambientales.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Fortalecer capacidades de la Fuerza Pública en recolección y manejo de evidencia física para delitos ambientales.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Implementar protocolos operacionales que fortalezcan la documentación de operaciones contra delitos ambientales.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Fortalecer el análisis de inteligencia e investigación financiera para identificar estructuras criminales ambientales.</p></div>
+</div></div>
+</div>
+</div></section>
+<div class="rdiv"></div>
+<section class="rs r2" id="r2">
+<div class="rb" data-n="R2"><span class="rtag">R - 02</span><h2 class="rtit">🛡️ ROBUSTECER<br>LAS FUERZAS<br>MILITARES Y POLICÍA</h2><p class="rdesc">Plan Colombia 2.0. Equipamiento, inteligencia y seguridad jurídica para el uniformado.</p></div>
+<div class="rpr"><p><strong>Principio rector:</strong> "Sin una Fuerza Pública con superioridad estratégica, respaldo jurídico y claridad doctrinal, el Estado pierde el control del territorio y el crimen impone su ley."</p></div>
+<div class="ln lnlast">
+<div class="lnh"><span class="lnb">Línea 1</span><div class="lnt">Fortalecimiento Integral del Poder Militar y Policial del Estado</div></div>
+<div class="aw">
+<button class="ah" onclick="toggle(this)"><span class="an">2.1</span><span class="at">Incrementar el apoyo logístico, financiero y la planta del personal</span><span class="aa">▼</span></button>
+<div class="ab"><div class="ti"><span class="tl">Tareas esenciales</span>
+<div class="td"><div class="dot"></div><p class="tx">Fortalecer capacidades logísticas de la Fuerza Pública para operaciones sostenidas.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Incrementar disponibilidad de equipamiento estratégico para operaciones de seguridad.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Fortalecer capacidades de movilidad aérea, terrestre y fluvial.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Optimizar la asignación de recursos financieros para operaciones contra economías criminales.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Fortalecer la sostenibilidad logística en territorios estratégicos.</p></div>
+</div></div>
+</div><div class="aw">
+<button class="ah" onclick="toggle(this)"><span class="an">2.2</span><span class="at">Potenciar la superioridad tecnológica mediante innovación, IA, IAG y Machine Learning</span><span class="aa">▼</span></button>
+<div class="ab"><div class="ti"><span class="tl">Tareas esenciales</span>
+<div class="td"><div class="dot"></div><p class="tx">Incorporar tecnologías avanzadas para la prevención y combate del crimen organizado.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Fortalecer sistemas de monitoreo y vigilancia del territorio nacional.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Desarrollar capacidades tecnológicas para análisis de información criminal.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Fortalecer interoperabilidad tecnológica entre instituciones de seguridad.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Desarrollar plataformas tecnológicas de apoyo a la toma de decisiones estratégicas.</p></div>
+</div></div>
+</div><div class="aw">
+<button class="ah" onclick="toggle(this)"><span class="an">2.3</span><span class="at">Implementar estrategia internacional de seguridad - Plan Colombia 2.0</span><span class="aa">▼</span></button>
+<div class="ab"><div class="ti"><span class="tl">Tareas esenciales</span>
+<div class="td"><div class="dot"></div><p class="tx">Fortalecer cooperación internacional en lucha contra crimen organizado transnacional.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Participar activamente en iniciativas multilaterales de seguridad.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Promover acuerdos internacionales para combatir economías ilícitas.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Posicionar a Colombia como actor relevante en cooperación internacional contra el crimen.</p></div>
+</div></div>
+</div><div class="aw">
+<button class="ah" onclick="toggle(this)"><span class="an">2.4</span><span class="at">Fortalecer la seguridad jurídica del personal</span><span class="aa">▼</span></button>
+<div class="ab"><div class="ti"><span class="tl">Tareas esenciales</span>
+<div class="td"><div class="dot"></div><p class="tx">Ampliar los mecanismos de defensa jurídica para miembros de la Fuerza Pública en todas las acciones del servicio.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Establecer lineamientos claros de actuación operativa conforme al DIH y los Derechos Humanos.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Fortalecer la capacitación jurídica del personal en el marco legal de las operaciones.</p></div>
+</div></div>
+</div><div class="aw">
+<button class="ah" onclick="toggle(this)"><span class="an">2.5</span><span class="at">Actualizar la doctrina y los procesos de capacitación profesional</span><span class="aa">▼</span></button>
+<div class="ab"><div class="ti"><span class="tl">Tareas esenciales</span>
+<div class="td"><div class="dot"></div><p class="tx">Actualizar la doctrina militar y policial frente a amenazas criminales contemporáneas.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Incorporar lecciones aprendidas de operaciones contra organizaciones criminales.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Fortalecer programas de formación estratégica para mandos de la Fuerza Pública.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Integrar capacidades interinstitucionales en los procesos de entrenamiento.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Actualizar permanentemente los programas de capacitación frente a nuevas amenazas.</p></div>
+</div></div>
+</div><div class="aw">
+<button class="ah" onclick="toggle(this)"><span class="an">2.6</span><span class="at">Crear carrera especial para incorporar oficiales retirados en roles asesores al Estado</span><span class="aa">▼</span></button>
+<div class="ab"><div class="ti"><span class="tl">Tareas esenciales</span>
+<div class="td"><div class="dot"></div><p class="tx">Aprovechar la experiencia del personal retirado en labores de asesoría institucional.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Integrar conocimiento acumulado de oficiales retirados en procesos de formación.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Fortalecer el vínculo institucional con la reserva activa de la Fuerza Pública.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Incorporar personal de las reservas activas como asesores activos en la orientación de la toma de decisiones.</p></div>
+</div></div>
+</div><div class="aw">
+<button class="ah" onclick="toggle(this)"><span class="an">2.7</span><span class="at">Fortalecer capacidades estratégicas y disuasivas del Estado mediante cooperación internacional</span><span class="aa">▼</span></button>
+<div class="ab"><div class="ti"><span class="tl">Tareas esenciales</span>
+<div class="td"><div class="dot"></div><p class="tx">Fortalecer intercambio de buenas prácticas en operaciones contra crimen organizado.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Incrementar capacidades conjuntas de entrenamiento y preparación operativa.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Consolidar redes internacionales de cooperación militar y policial.</p></div>
+</div></div>
+</div><div class="aw">
+<button class="ah" onclick="toggle(this)"><span class="an">2.8</span><span class="at">Desarrollar y proyectar capacidades de disuasión estratégica frente a amenazas externas e internas</span><span class="aa">▼</span></button>
+<div class="ab"><div class="ti"><span class="tl">Tareas esenciales</span>
+<div class="td"><div class="dot"></div><p class="tx">Crear un Comando Conjunto de Ciberseguridad a nivel del Ministerio Nacional de Defensa.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Activación del Centro de Inteligencia Artificial al nivel del Ministerio de Defensa Nacional.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Fortalecer las capacidades disuasivas para preservar la soberanía nacional e integridad territorial.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Fortalecer la capacidad de respuesta frente a amenazas a la seguridad nacional.</p></div>
+</div></div>
+</div><div class="aw">
+<button class="ah" onclick="toggle(this)"><span class="an">2.9</span><span class="at">Restablecer y fortalecer convenios de cooperación con Israel, EE.UU., Ecuador y Corea del Sur</span><span class="aa">▼</span></button>
+<div class="ab"><div class="ti"><span class="tl">Tareas esenciales</span>
+<div class="td"><div class="dot"></div><p class="tx">Suscribir convenios bilaterales de cooperación en seguridad, defensa e inteligencia con Israel, Estados Unidos, Ecuador y Corea del Sur.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Desarrollar programas conjuntos de entrenamiento operativo y transferencia tecnológica con fuerzas aliadas.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Intercambiar de manera permanente información estratégica de inteligencia con agencias aliadas bajo mandato presidencial directo.</p></div>
+</div></div>
+</div>
+</div></section>
+<div class="rdiv"></div>
+<section class="rs r3" id="r3">
+<div class="rb" data-n="R3"><span class="rtag">R - 03</span><h2 class="rtit">🤝 RE-ENAMORAR<br>A LAS<br>COMUNIDADES</h2><p class="rdesc">Ingresos dignos, sustitución de cultivos, seguridad ciudadana y protección a la mujer.</p></div>
+<div class="rpr"><p><strong>Principio rector:</strong> "Sin confianza ciudadana y sin cooperación estratégica, la seguridad es frágil y transitoria."</p></div>
+<div class="ln">
+<div class="lnh"><span class="lnb">Línea 1</span><div class="lnt">Emplear la Fuerza Pública en Acciones Integrales para el Desarrollo Rural</div></div>
+<div class="aw">
+<button class="ah" onclick="toggle(this)"><span class="an">3.1</span><span class="at">Ejecutar acciones integrales de las Fuerzas Militares para el desarrollo de las comunidades</span><span class="aa">▼</span></button>
+<div class="ab"><div class="ti"><span class="tl">Tareas esenciales</span>
+<div class="td"><div class="dot"></div><p class="tx">Desplegar brigadas de acción integral en territorios históricamente abandonados por el Estado.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Ejecutar jornadas de atención en salud, registro civil, educación y servicios básicos articuladas con la presencia militar.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Integrar la oferta social del Estado con las operaciones de la Fuerza Pública en territorios recuperados.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Establecer centros de atención comunitaria permanentes en zonas consolidadas.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Articular la acción integral de la Fuerza Pública con alcaldías, gobernaciones y entidades del orden nacional.</p></div>
+</div></div>
+</div><div class="aw">
+<button class="ah" onclick="toggle(this)"><span class="an">3.2</span><span class="at">Promoción de corresponsabilidad en seguridad a comunidades campesinas e indígenas</span><span class="aa">▼</span></button>
+<div class="ab"><div class="ti"><span class="tl">Tareas esenciales</span>
+<div class="td"><div class="dot"></div><p class="tx">Implementar mecanismos de alerta temprana comunitaria articulados con el sistema de inteligencia de la Fuerza Pública.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Proteger institucionalmente a líderes campesinos que colaboran activamente con el Estado.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Desarrollar proyectos productivos rurales legales con acompañamiento de seguridad permanente.</p></div>
+</div></div>
+</div><div class="aw">
+<button class="ah" onclick="toggle(this)"><span class="an">3.3</span><span class="at">Sustitución inteligente de cultivos ilícitos como alternativas reales para los campesinos</span><span class="aa">▼</span></button>
+<div class="ab"><div class="ti"><span class="tl">Tareas esenciales</span>
+<div class="td"><div class="dot"></div><p class="tx">Implementar programas de sustitución voluntaria con condicionalidad real y alternativas económicas viables.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Articular la sustitución de cultivos con cadenas productivas legales que tengan mercado garantizado para el campesino.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Fortalecer la presencia del Estado en territorios cocaleros como condición previa a cualquier proceso de sustitución.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Aplicar erradicación forzada en territorios donde fallen los acuerdos de sustitución voluntaria verificada.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Desarrollar incentivos económicos diferenciados para familias campesinas que abandonen definitivamente los cultivos ilícitos.</p></div>
+</div></div>
+</div><div class="aw">
+<button class="ah" onclick="toggle(this)"><span class="an">3.4</span><span class="at">Fortalecer mecanismos de prevención del reclutamiento de población vulnerable y NNAJ</span><span class="aa">▼</span></button>
+<div class="ab"><div class="ti"><span class="tl">Tareas esenciales</span>
+<div class="td"><div class="dot"></div><p class="tx">Identificar territorios con mayor riesgo de reclutamiento de NNAJ por estructuras criminales.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Implementar sistemas de alerta temprana frente al reclutamiento de menores.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Integrar programas educativos, sociales y comunitarios para la protección de niños, niñas, jóvenes y adultos.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Fortalecer la atención integral a menores víctimas de reclutamiento.</p></div>
+</div></div>
+</div><div class="aw">
+<button class="ah" onclick="toggle(this)"><span class="an">3.5</span><span class="at">Fortalecer intervenciones estatales en territorios vulnerables</span><span class="aa">▼</span></button>
+<div class="ab"><div class="ti"><span class="tl">Tareas esenciales</span>
+<div class="td"><div class="dot"></div><p class="tx">Priorizar territorios con alta presencia de economías criminales para intervención institucional.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Coordinar intervención de entidades del Estado en territorios afectados por criminalidad.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Fortalecer coordinación entre autoridades nacionales y territoriales en intervenciones institucionales.</p></div>
+</div></div>
+</div><div class="aw">
+<button class="ah" onclick="toggle(this)"><span class="an">3.6</span><span class="at">Fortalecer cultura de legalidad y confianza institucional</span><span class="aa">▼</span></button>
+<div class="ab"><div class="ti"><span class="tl">Tareas esenciales</span>
+<div class="td"><div class="dot"></div><p class="tx">Promover campañas institucionales de cultura de legalidad.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Fortalecer programas educativos orientados al respeto por la legalidad.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Fortalecer confianza ciudadana en instituciones de seguridad y justicia.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Promover valores de legalidad y corresponsabilidad ciudadana.</p></div>
+</div></div>
+</div><div class="aw">
+<button class="ah" onclick="toggle(this)"><span class="an">3.7</span><span class="at">Desarrollar comunicación estratégica del Estado en materia de seguridad y legalidad</span><span class="aa">▼</span></button>
+<div class="ab"><div class="ti"><span class="tl">Tareas esenciales</span>
+<div class="td"><div class="dot"></div><p class="tx">Diseñar estrategia nacional de comunicación en seguridad y legalidad.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Fortalecer divulgación institucional de resultados contra el crimen organizado.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Desarrollar campañas públicas orientadas a fortalecer confianza en el Estado.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Contrarrestar narrativas criminales y desinformación en materia de seguridad.</p></div>
+</div></div>
+</div>
+</div><div class="ln">
+<div class="lnh"><span class="lnb">Línea 2</span><div class="lnt">Fortalecimiento de la Seguridad Ciudadana y la Convivencia</div></div>
+<div class="aw">
+<button class="ah" onclick="toggle(this)"><span class="an">3.2.1</span><span class="at">Implementar estrategias de prevención social y situacional del delito</span><span class="aa">▼</span></button>
+<div class="ab"><div class="ti"><span class="tl">Tareas esenciales</span>
+<div class="td"><div class="dot"></div><p class="tx">Identificar factores de riesgo estructurales asociados a la criminalidad urbana y rural en territorios priorizados.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Diseñar e implementar programas de prevención social del delito dirigidos a poblaciones vulnerables.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Desplegar estrategias de prevención situacional mediante iluminación, cámaras y recuperación del espacio público.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Articular programas sociales del Estado con estrategias territoriales de prevención del delito.</p></div>
+</div></div>
+</div><div class="aw">
+<button class="ah" onclick="toggle(this)"><span class="an">3.2.2</span><span class="at">Fortalecimiento de las capacidades de la Policía Comunitaria</span><span class="aa">▼</span></button>
+<div class="ab"><div class="ti"><span class="tl">Tareas esenciales</span>
+<div class="td"><div class="dot"></div><p class="tx">Incrementar el pie de fuerza de policía comunitaria en barrios con alta incidencia delictiva.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Capacitar a los cuadrantes policiales en gestión comunitaria, resolución de conflictos y construcción de confianza ciudadana.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Fortalecer los Frentes de Seguridad Ciudadana como mecanismo de corresponsabilidad.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Dotar tecnológicamente a la Policía Comunitaria con herramientas de georreferenciación en tiempo real.</p></div>
+</div></div>
+</div><div class="aw">
+<button class="ah" onclick="toggle(this)"><span class="an">3.2.3</span><span class="at">Reducir los niveles de homicidio y extorsión</span><span class="aa">▼</span></button>
+<div class="ab"><div class="ti"><span class="tl">Tareas esenciales</span>
+<div class="td"><div class="dot"></div><p class="tx">Identificar territorios con mayor incidencia de homicidio y extorsión.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Fortalecer estrategias focalizadas contra estructuras dedicadas a homicidio y extorsión.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Fortalecer capacidades de investigación criminal sobre homicidio y extorsión.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Fortalecer mecanismos de protección a víctimas de extorsión.</p></div>
+</div></div>
+</div><div class="aw">
+<button class="ah" onclick="toggle(this)"><span class="an">3.2.4</span><span class="at">Reducir los niveles de hurto en todas sus modalidades</span><span class="aa">▼</span></button>
+<div class="ab"><div class="ti"><span class="tl">Tareas esenciales</span>
+<div class="td"><div class="dot"></div><p class="tx">Identificar zonas con mayor incidencia de hurto.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Fortalecer estrategias policiales contra hurto en espacios públicos y transporte.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Desarticular estructuras criminales dedicadas al hurto.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Fortalecer coordinación entre autoridades locales y Policía Nacional.</p></div>
+</div></div>
+</div><div class="aw">
+<button class="ah" onclick="toggle(this)"><span class="an">3.2.5</span><span class="at">Reducir el tráfico y la circulación ilegal de armas</span><span class="aa">▼</span></button>
+<div class="ab"><div class="ti"><span class="tl">Tareas esenciales</span>
+<div class="td"><div class="dot"></div><p class="tx">Identificar y desarticular las redes criminales dedicadas al tráfico ilegal de armas en el territorio nacional.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Fortalecer los controles en fronteras, puertos y aeropuertos para interceptar el ingreso de armas ilegales.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Implementar operativos de decomiso masivo de armas ilegales en territorios con alta concentración criminal.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Establecer un registro nacional unificado de armas con trazabilidad obligatoria para detectar desvíos al mercado ilegal.</p></div>
+</div></div>
+</div><div class="aw">
+<button class="ah" onclick="toggle(this)"><span class="an">3.2.6</span><span class="at">Prevenir vinculación de jóvenes a estructuras criminales y debilitar el microtráfico</span><span class="aa">▼</span></button>
+<div class="ab"><div class="ti"><span class="tl">Tareas esenciales</span>
+<div class="td"><div class="dot"></div><p class="tx">Identificar y mapear estructuras criminales dedicadas al microtráfico en territorios urbanos y rurales.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Desarticular redes de distribución y comercialización de estupefacientes con tolerancia cero.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Fortalecer operativos conjuntos entre Policía, Fiscalía e inteligencia para desmantelar economías del narcomenudeo.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Recuperar y reactivar socialmente los territorios liberados del control criminal.</p></div>
+</div></div>
+</div><div class="aw">
+<button class="ah" onclick="toggle(this)"><span class="an">3.2.7</span><span class="at">Fortalecer la convivencia ciudadana y garantizar el cumplimiento de los PISCC</span><span class="aa">▼</span></button>
+<div class="ab"><div class="ti"><span class="tl">Tareas esenciales</span>
+<div class="td"><div class="dot"></div><p class="tx">Fortalecer programas institucionales de convivencia ciudadana.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Promover mecanismos de mediación comunitaria para resolución de conflictos.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Fortalecer participación ciudadana en iniciativas de convivencia.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Fortalecer coordinación entre autoridades locales y Policía en gestión de convivencia.</p></div>
+</div></div>
+</div><div class="aw">
+<button class="ah" onclick="toggle(this)"><span class="an">3.2.8</span><span class="at">Recuperar barrios críticos capturados por el crimen organizado en ciudades principales</span><span class="aa">▼</span></button>
+<div class="ab"><div class="ti"><span class="tl">Tareas esenciales</span>
+<div class="td"><div class="dot"></div><p class="tx">Identificar factores de riesgo asociados a criminalidad urbana.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Diseñar programas de prevención social del delito en comunidades vulnerables.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Fortalecer intervención institucional en territorios con alta criminalidad.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Fortalecer estrategias de prevención situacional del delito en espacios urbanos.</p></div>
+</div></div>
+</div>
+</div><div class="ln lnlast">
+<div class="lnh"><span class="lnb">Línea 3</span><div class="lnt">Seguridad de la Mujer y Enfoque de Género</div></div>
+<div class="aw">
+<button class="ah" onclick="toggle(this)"><span class="an">3.3.1</span><span class="at">Reducir el feminicidio y la violencia letal contra las mujeres</span><span class="aa">▼</span></button>
+<div class="ab"><div class="ti"><span class="tl">Tareas esenciales</span>
+<div class="td"><div class="dot"></div><p class="tx">Crear sistema nacional de monitoreo y alerta temprana de feminicidio en tiempo real.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Fortalecer capacidades investigativas para judicialización efectiva del feminicidio.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Implementar rutas de protección inmediata para mujeres en riesgo de violencia letal.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Desarticular estructuras criminales que ejercen violencia sistemática contra mujeres.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Establecer fiscalías especializadas en violencias basadas en género en territorios críticos.</p></div>
+</div></div>
+</div><div class="aw">
+<button class="ah" onclick="toggle(this)"><span class="an">3.3.2</span><span class="at">Combatir la trata de personas con enfoque de género</span><span class="aa">▼</span></button>
+<div class="ab"><div class="ti"><span class="tl">Tareas esenciales</span>
+<div class="td"><div class="dot"></div><p class="tx">Fortalecer el sistema nacional de identificación y rescate de víctimas de trata.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Desarticular redes de trata de personas con énfasis en explotación sexual y laboral.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Integrar inteligencia financiera para identificar y atacar economías de la trata.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Fortalecer cooperación internacional para combatir redes transnacionales de trata.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Implementar programas de reintegración y atención integral para víctimas de trata.</p></div>
+</div></div>
+</div><div class="aw">
+<button class="ah" onclick="toggle(this)"><span class="an">3.3.3</span><span class="at">Erradicar el uso de la violencia sexual como arma de control territorial</span><span class="aa">▼</span></button>
+<div class="ab"><div class="ti"><span class="tl">Tareas esenciales</span>
+<div class="td"><div class="dot"></div><p class="tx">Implementar protocolos de atención inmediata para víctimas de violencia sexual en zonas de conflicto.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Fortalecer mecanismos de investigación y judicialización de delitos sexuales en el conflicto.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Articular Fuerza Pública y sistema judicial para documentar y perseguir crímenes sexuales.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Incorporar perspectiva de género en la doctrina y protocolos operativos de la Fuerza Pública.</p></div>
+</div></div>
+</div><div class="aw">
+<button class="ah" onclick="toggle(this)"><span class="an">3.3.4</span><span class="at">Fortalecer la respuesta estatal frente a la violencia doméstica e intrafamiliar</span><span class="aa">▼</span></button>
+<div class="ab"><div class="ti"><span class="tl">Tareas esenciales</span>
+<div class="td"><div class="dot"></div><p class="tx">Fortalecer capacidades institucionales de las comisarías de familia en todo el país.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Implementar medidas de protección de aplicación inmediata para víctimas de violencia doméstica.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Fortalecer la coordinación entre Policía, Fiscalía y sistema de protección social.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Crear unidades especializadas de primera respuesta ante llamadas de emergencia por violencia doméstica.</p></div>
+</div></div>
+</div><div class="aw">
+<button class="ah" onclick="toggle(this)"><span class="an">3.3.5</span><span class="at">Proteger a las mujeres líderes sociales y defensoras de derechos humanos</span><span class="aa">▼</span></button>
+<div class="ab"><div class="ti"><span class="tl">Tareas esenciales</span>
+<div class="td"><div class="dot"></div><p class="tx">Fortalecer el sistema de protección del Estado para mujeres líderes en riesgo.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Implementar esquemas de seguridad diferenciados para mujeres defensoras en territorios de conflicto.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Desarticular amenazas criminales dirigidas contra lideresas comunitarias y sociales.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Fortalecer mecanismos de respuesta rápida frente a amenazas contra lideresas.</p></div>
+</div></div>
+</div><div class="aw">
+<button class="ah" onclick="toggle(this)"><span class="an">3.3.6</span><span class="at">Incorporar la perspectiva de género en la arquitectura institucional de seguridad</span><span class="aa">▼</span></button>
+<div class="ab"><div class="ti"><span class="tl">Tareas esenciales</span>
+<div class="td"><div class="dot"></div><p class="tx">Incorporar enfoque de género en la política nacional de seguridad y en los PISCC territoriales.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Fortalecer la formación en género y derechos de las mujeres en toda la Fuerza Pública.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Desarrollar indicadores desagregados por sexo en todos los sistemas de medición de seguridad.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Fortalecer participación de mujeres en cargos de decisión dentro de instituciones de seguridad.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Implementar mecanismos de denuncia seguros y confidenciales para violencias de género.</p></div>
+</div></div>
+</div>
+</div></section>
+<div class="rdiv"></div>
+<section class="rs r4" id="r4">
+<div class="rb" data-n="R4"><span class="rtag">R - 04</span><h2 class="rtit">⚖️ RESTABLECER<br>LA<br>LEGALIDAD</h2><p class="rdesc">Todos los criminales y corruptos van a la cárcel. Donde no gobierna la ley, gobierna el crimen.</p></div>
+<div class="rpr"><p><strong>Principio rector:</strong> "Donde no gobierna la ley, gobierna el crimen."</p></div>
+<div class="ln">
+<div class="lnh"><span class="lnb">Línea 1</span><div class="lnt">Supremacía Judicial e Imperio Efectivo de la Ley</div></div>
+<div class="aw">
+<button class="ah" onclick="toggle(this)"><span class="an">4.1.1</span><span class="at">Fortalecer presencia judicial en territorios críticos</span><span class="aa">▼</span></button>
+<div class="ab"><div class="ti"><span class="tl">Tareas esenciales</span>
+<div class="td"><div class="dot"></div><p class="tx">Priorizar territorios con alta incidencia criminal para fortalecimiento institucional judicial.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Fortalecer presencia de fiscales y jueces en territorios con alta criminalidad.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Fortalecer capacidades de investigación judicial en territorios priorizados.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Fortalecer coordinación entre autoridades judiciales y Fuerza Pública en territorios críticos.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Fortalecer infraestructura institucional del sistema judicial en territorios priorizados.</p></div>
+</div></div>
+</div><div class="aw">
+<button class="ah" onclick="toggle(this)"><span class="an">4.1.2</span><span class="at">Reducir la tasa de impunidad en territorios priorizados</span><span class="aa">▼</span></button>
+<div class="ab"><div class="ti"><span class="tl">Tareas esenciales</span>
+<div class="td"><div class="dot"></div><p class="tx">Priorizar investigación judicial de delitos asociados a economías criminales.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Fortalecer capacidades investigativas de fiscalía frente a estructuras criminales.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Fortalecer coordinación entre investigación criminal y procesos judiciales.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Fortalecer análisis criminal para priorización de casos de alto impacto.</p></div>
+</div></div>
+</div><div class="aw">
+<button class="ah" onclick="toggle(this)"><span class="an">4.1.3</span><span class="at">Transformar el INPEC y desarrollar modelos de cárceles productivas y seguras</span><span class="aa">▼</span></button>
+<div class="ab"><div class="ti"><span class="tl">Tareas esenciales</span>
+<div class="td"><div class="dot"></div><p class="tx">Fortalecer control institucional en centros penitenciarios.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Reducir capacidad de organizaciones criminales para operar desde centros carcelarios.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Fortalecer mecanismos de control tecnológico en establecimientos penitenciarios.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Fortalecer coordinación entre sistema penitenciario y autoridades judiciales.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Implementar programas institucionales orientados a reducir reincidencia criminal.</p></div>
+<p class="tn">** Proceso transversal articulado con la línea estratégica de Justicia.</p>
+</div></div>
+</div><div class="aw">
+<button class="ah" onclick="toggle(this)"><span class="an">4.1.4</span><span class="at">Implementar política criminal priorizada</span><span class="aa">▼</span></button>
+<div class="ab"><div class="ti"><span class="tl">Tareas esenciales</span>
+<div class="td"><div class="dot"></div><p class="tx">Formular política criminal alineada con amenazas estratégicas nacionales.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Priorizar persecución penal contra organizaciones criminales.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Orientar capacidades judiciales hacia delitos asociados a economías criminales.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Fortalecer la capacidad sancionatoria del Estado.</p></div>
+</div></div>
+</div><div class="aw">
+<button class="ah" onclick="toggle(this)"><span class="an">4.1.5</span><span class="at">Romper la puerta giratoria mediante justicia efectiva</span><span class="aa">▼</span></button>
+<div class="ab"><div class="ti"><span class="tl">Tareas esenciales</span>
+<div class="td"><div class="dot"></div><p class="tx">Promover la certeza del castigo frente a delitos de alto impacto.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Eliminar vacíos institucionales que facilitan la impunidad.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Fortalecer la credibilidad institucional del sistema de justicia.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Mejorar los sistemas de información para el conocimiento de crímenes y evitar la reincidencia, mejorar la comunicación entre jueces y fiscales.</p></div>
+</div></div>
+</div>
+</div><div class="ln lnlast">
+<div class="lnh"><span class="lnb">Línea 2</span><div class="lnt">Restablecimiento y Consolidación de la Soberanía Territorial del Estado</div></div>
+<div class="aw">
+<button class="ah" onclick="toggle(this)"><span class="an">4.2.1</span><span class="at">Neutralizar estructuras de mando criminal</span><span class="aa">▼</span></button>
+<div class="ab"><div class="ti"><span class="tl">Tareas esenciales</span>
+<div class="td"><div class="dot"></div><p class="tx">Identificar estructuras de mando responsables del control territorial criminal.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Debilitar permanentemente la capacidad operativa de organizaciones criminales.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Desarticular redes de liderazgo criminal en territorios estratégicos.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Reducir la capacidad de reconfiguración criminal.</p></div>
+</div></div>
+</div><div class="aw">
+<button class="ah" onclick="toggle(this)"><span class="an">4.2.2</span><span class="at">Consolidar presencia institucional del Estado en territorios priorizados</span><span class="aa">▼</span></button>
+<div class="ab"><div class="ti"><span class="tl">Tareas esenciales</span>
+<div class="td"><div class="dot"></div><p class="tx">Establecer presencia institucional permanente en territorios críticos.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Consolidar la presencia integral del Estado en zonas priorizadas.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Integrar capacidades institucionales para intervención territorial sostenida.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Fortalecer la confianza ciudadana en la presencia del Estado.</p></div>
+</div></div>
+</div><div class="aw">
+<button class="ah" onclick="toggle(this)"><span class="an">4.2.3</span><span class="at">Restablecer y consolidar el control territorial en zonas críticas</span><span class="aa">▼</span></button>
+<div class="ab"><div class="ti"><span class="tl">Tareas esenciales</span>
+<div class="td"><div class="dot"></div><p class="tx">Priorizar territorios estratégicos para recuperación estatal.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Ejecutar intervención estructural del Estado.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Impulsar la consolidación institucional posterior a la recuperación.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Afianzar la irreversibilidad del control territorial estatal.</p></div>
+</div></div>
+</div><div class="aw">
+<button class="ah" onclick="toggle(this)"><span class="an">4.2.4</span><span class="at">Fortalecer gobernanza local</span><span class="aa">▼</span></button>
+<div class="ab"><div class="ti"><span class="tl">Tareas esenciales</span>
+<div class="td"><div class="dot"></div><p class="tx">Consolidar gobernanza institucional en territorios estratégicos.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Fortalecer capacidades institucionales territoriales.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Fortalecer la gobernabilidad efectiva en zonas priorizadas.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Integrar autoridades territoriales en la estrategia nacional de seguridad.</p></div>
+</div></div>
+</div><div class="aw">
+<button class="ah" onclick="toggle(this)"><span class="an">4.2.5</span><span class="at">Coordinar capacidades institucionales con gobernadores y alcaldes</span><span class="aa">▼</span></button>
+<div class="ab"><div class="ti"><span class="tl">Tareas esenciales</span>
+<div class="td"><div class="dot"></div><p class="tx">Integrar autoridades locales en la arquitectura nacional de seguridad.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Coordinar la alineación estratégica entre nación y territorios.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Fortalecer la unidad de acción del Estado en seguridad territorial.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Consolidar coordinación interinstitucional entre niveles de gobierno.</p></div>
+</div></div>
+</div>
+</div></section>
+<footer>
+<img src="https://palomapresidente.com.co/images/logo-paloma 2026.png" alt="Paloma 2026" onerror="this.style.display='none'">
+<p><strong>Seguridad Total - Las Cuatro R - Vivir Sin Miedo</strong><br>Autoridad y Firmeza: Colombia Segura para el Desarrollo 2026-2030<br>palomapresidente.com.co</p>
+</footer>
+<script>
+function toggle(btn){btn.closest(".aw").classList.toggle("open")}
+</script>
+</body>
+</html>
