@@ -2,30 +2,60 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
 <title>Seguridad Total - Las 4 R - Paloma 2026</title>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300&display=swap" rel="stylesheet">
 <style>
 :root{--navy:#09152a;--navy2:#0e2a50;--gold:#c8a020;--gold2:#e8c040;--red:#c02820;--white:#fff;--text:#d0dcea;--gray:#7a8fa8;--c1:#2563c4;--c2:#1a8c4e;--c3:#c47a10;--c4:#7c2caa}
 *{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
 body{background:var(--navy);color:var(--white);font-family:"Open Sans",sans-serif;overflow-x:hidden}
-.hero{position:relative;overflow:hidden;background:linear-gradient(170deg,#0e2a50 0%,#09152a 60%)}
-.hero-img{width:100%;display:block;max-height:460px;object-fit:contain;object-position:center center;opacity:.88;background:linear-gradient(160deg,#0e2a50,#09152a)}
-.hero-overlay{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(to top,var(--navy) 0%,rgba(9,21,42,.88) 35%,rgba(9,21,42,.25) 70%,transparent 100%);padding:28px 22px 24px}
-.logo-img{height:42px;display:block;margin-bottom:14px;filter:brightness(0) invert(1);opacity:.95}
-.hero h1{font-family:"Montserrat",sans-serif;font-weight:900;font-size:clamp(38px,12vw,60px);line-height:.92;letter-spacing:1px;text-transform:uppercase}
+
+/* HERO */
+.hero{position:relative;overflow:hidden;background:linear-gradient(170deg,#0e2a50 0%,#09152a 60%);min-height:260px}
+.hero-img-wrap{width:100%;overflow:hidden;background:linear-gradient(160deg,#0e2a50,#09152a);display:flex;justify-content:center;align-items:center;min-height:220px}
+.hero-img{width:100%;max-width:480px;display:block;object-fit:cover;object-position:top center;opacity:.9}
+.hero-img-placeholder{width:100%;min-height:220px;display:flex;align-items:center;justify-content:center;background:linear-gradient(160deg,#0e2a50,#09152a)}
+.hero-img-placeholder span{font-size:80px}
+.hero-overlay{position:relative;background:linear-gradient(to top,var(--navy) 0%,rgba(9,21,42,.97) 60%,rgba(9,21,42,.7) 100%);padding:22px 20px 24px;margin-top:-60px;z-index:2}
+.logo-img{height:38px;display:block;margin-bottom:12px;filter:brightness(0) invert(1);opacity:.95;max-width:200px}
+.hero h1{font-family:"Montserrat",sans-serif;font-weight:900;font-size:clamp(36px,11vw,58px);line-height:.92;letter-spacing:1px;text-transform:uppercase}
 .hero h1 em{color:var(--gold2);font-style:normal;display:block}
 .hero-slogan{margin-top:14px;background:var(--gold);display:inline-block;padding:8px 16px}
 .hero-slogan p{font-family:"Montserrat",sans-serif;font-weight:800;font-size:11px;color:var(--navy);letter-spacing:.5px;line-height:1.3;text-transform:uppercase}
-.hero-promise{margin-top:12px;font-size:12px;color:var(--gray);font-style:italic;line-height:1.5}
+.hero-promise{margin-top:10px;font-size:12px;color:var(--gray);font-style:italic;line-height:1.5}
+
+/* NAV - bigger tap targets on mobile */
 .nav-strip{display:grid;grid-template-columns:repeat(4,1fr);border-top:2px solid var(--gold);border-bottom:1px solid rgba(255,255,255,.07);background:#08172e}
-.nav-btn{padding:12px 6px;background:none;border:none;border-right:1px solid rgba(255,255,255,.06);color:var(--gray);cursor:pointer;font-family:"Montserrat",sans-serif;font-size:8px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;text-align:center;line-height:1.35;transition:all .2s}
-.nav-btn:last-child{border-right:none}.nav-btn:hover,.nav-btn:active{background:rgba(200,160,32,.1);color:var(--gold2)}
-.nb{font-size:18px;display:block;margin-bottom:4px}
+.nav-btn{padding:14px 4px;background:none;border:none;border-right:1px solid rgba(255,255,255,.06);color:var(--gray);cursor:pointer;font-family:"Montserrat",sans-serif;font-size:8px;font-weight:700;letter-spacing:.3px;text-transform:uppercase;text-align:center;line-height:1.3;transition:all .2s;-webkit-tap-highlight-color:rgba(200,160,32,.2);min-height:60px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px}
+.nav-btn:last-child{border-right:none}
+.nav-btn:active{background:rgba(200,160,32,.15);color:var(--gold2)}
+.nb{font-size:20px;line-height:1}
+
+/* INTRO */
 .plan-intro{padding:22px 20px;background:var(--navy2);border-bottom:1px solid rgba(255,255,255,.06)}
 .plan-intro h2{font-family:"Montserrat",sans-serif;font-weight:900;font-size:18px;color:var(--white);text-transform:uppercase;letter-spacing:1px;margin-bottom:8px}
 .plan-intro p{font-size:13px;color:var(--text);line-height:1.65;font-weight:300}
 .plan-intro strong{color:var(--gold2);font-weight:600}
+
+/* PROCESOS ORIENTADORES */
+.po-section{background:#08172e;border-bottom:2px solid var(--gold);padding:0 0 6px}
+.po-title{font-family:"Montserrat",sans-serif;font-weight:900;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);padding:18px 20px 10px;border-bottom:1px solid rgba(255,255,255,.06)}
+.po-tabs{display:grid;grid-template-columns:1fr 1fr}
+.po-tab-btn{padding:14px 12px;background:none;border:none;border-right:1px solid rgba(255,255,255,.06);color:var(--gray);cursor:pointer;font-family:"Montserrat",sans-serif;font-size:10px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;text-align:center;line-height:1.3;transition:all .2s;-webkit-tap-highlight-color:rgba(200,160,32,.2);min-height:54px;display:flex;align-items:center;justify-content:center;gap:6px}
+.po-tab-btn:last-child{border-right:none}
+.po-tab-btn.po-active{background:rgba(200,160,32,.1);color:var(--gold2);border-bottom:2px solid var(--gold)}
+.po-tab-btn:active{background:rgba(200,160,32,.1)}
+.po-icon{font-size:18px;flex-shrink:0}
+.po-content{display:none;padding:16px 20px 20px;animation:fadeIn .25s ease}
+.po-content.po-visible{display:block}
+@keyframes fadeIn{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:translateY(0)}}
+.po-subtitle{font-family:"Montserrat",sans-serif;font-weight:800;font-size:13px;color:var(--white);margin-bottom:10px;text-transform:uppercase;letter-spacing:.3px}
+.po-desc{font-size:12px;color:var(--text);line-height:1.65;font-weight:300;margin-bottom:14px}
+.po-comp{margin-bottom:12px;border-left:3px solid var(--gold);padding-left:12px}
+.po-comp-title{font-family:"Montserrat",sans-serif;font-size:11px;font-weight:700;color:var(--gold2);text-transform:uppercase;letter-spacing:.5px;margin-bottom:5px}
+.po-comp-text{font-size:12px;color:rgba(255,255,255,.72);line-height:1.6;font-weight:300}
+
+/* Rs */
 .rs{padding-bottom:8px}
 .rb{padding:26px 20px 16px;position:relative;overflow:hidden;border-left:5px solid var(--rc,#fff)}
 .rb::after{content:attr(data-n);position:absolute;right:-6px;top:-4px;font-family:"Montserrat",sans-serif;font-weight:900;font-size:110px;opacity:.04;line-height:1;color:var(--white);pointer-events:none}
@@ -40,22 +70,25 @@ body{background:var(--navy);color:var(--white);font-family:"Open Sans",sans-seri
 .lnh{padding:13px 16px;display:flex;align-items:flex-start;gap:10px;background:rgba(255,255,255,.04);border-bottom:1px solid rgba(255,255,255,.05)}
 .lnb{font-family:"Montserrat",sans-serif;font-size:8px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:4px 8px;flex-shrink:0;margin-top:2px;border-radius:2px;background:color-mix(in srgb,var(--rc) 18%,transparent);color:var(--rc,#fff);white-space:nowrap}
 .lnt{font-family:"Montserrat",sans-serif;font-size:13px;font-weight:700;line-height:1.35;color:var(--white);text-transform:uppercase;letter-spacing:.2px}
+
+/* ACCORDION — bigger tap area on mobile */
 .aw{border-bottom:1px solid rgba(255,255,255,.04)}.aw:last-child{border-bottom:none}
-.ah{display:flex;align-items:flex-start;gap:10px;padding:13px 16px;cursor:pointer;background:transparent;width:100%;border:none;text-align:left;transition:background .18s}
-.ah:hover{background:rgba(255,255,255,.03)}
-.an{font-family:"Montserrat",sans-serif;font-size:9px;font-weight:700;letter-spacing:.5px;flex-shrink:0;margin-top:2px;color:var(--rc,#fff);opacity:.65;min-width:38px}
-.at{font-size:13px;line-height:1.55;color:var(--white);font-weight:600;flex:1;text-align:left}
-.aa{font-size:11px;color:var(--gray);flex-shrink:0;margin-top:3px;transition:transform .25s;opacity:.6}
+.ah{display:flex;align-items:flex-start;gap:10px;padding:16px 16px;cursor:pointer;background:transparent;width:100%;border:none;text-align:left;transition:background .18s;-webkit-tap-highlight-color:rgba(255,255,255,.05);min-height:54px}
+.ah:active{background:rgba(255,255,255,.04)}
+.an{font-family:"Montserrat",sans-serif;font-size:9px;font-weight:700;letter-spacing:.5px;flex-shrink:0;margin-top:3px;color:var(--rc,#fff);opacity:.65;min-width:38px}
+.at{font-size:13px;line-height:1.5;color:var(--white);font-weight:600;flex:1;text-align:left}
+.aa{font-size:14px;color:var(--gray);flex-shrink:0;margin-top:2px;transition:transform .25s;opacity:.6;padding:2px 4px}
 .aw.open .aa{transform:rotate(180deg)}
 .ab{max-height:0;overflow:hidden;transition:max-height .4s ease}.aw.open .ab{max-height:3000px}
-.ti{padding:4px 16px 16px 54px}
+.ti{padding:4px 16px 16px 16px}
 .tl{font-family:"Montserrat",sans-serif;font-size:8px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--rc,#fff);opacity:.7;margin-bottom:10px;display:block}
-.td{display:flex;gap:8px;align-items:flex-start;margin-bottom:8px}.td:last-child{margin-bottom:0}
-.dot{width:5px;height:5px;border-radius:50%;background:var(--rc,#fff);opacity:.5;flex-shrink:0;margin-top:6px}
-.tx{font-size:12px;line-height:1.65;color:rgba(255,255,255,.72);font-weight:300}
+.td{display:flex;gap:10px;align-items:flex-start;margin-bottom:10px}.td:last-child{margin-bottom:0}
+.dot{width:6px;height:6px;border-radius:50%;background:var(--rc,#fff);opacity:.5;flex-shrink:0;margin-top:7px}
+.tx{font-size:13px;line-height:1.65;color:rgba(255,255,255,.75);font-weight:300}
 .tn{font-size:10px;color:var(--gold);font-style:italic;margin-top:8px;padding-top:8px;border-top:1px solid rgba(255,255,255,.06)}
 .rdiv{height:1px;background:linear-gradient(90deg,transparent,rgba(200,160,32,.18),transparent);margin:14px 0 4px}
-footer{padding:28px 20px 48px;border-top:2px solid var(--gold);background:#08172e;text-align:center}
+
+footer{padding:28px 20px 56px;border-top:2px solid var(--gold);background:#08172e;text-align:center}
 footer img{height:36px;filter:brightness(0) invert(1);opacity:.65;margin-bottom:12px;display:block;margin-left:auto;margin-right:auto}
 footer p{font-family:"Montserrat",sans-serif;font-size:9px;font-weight:600;letter-spacing:2px;color:var(--gray);text-transform:uppercase;line-height:2}
 footer strong{color:var(--gold)}
@@ -63,25 +96,109 @@ footer strong{color:var(--gold)}
 </style>
 </head>
 <body>
+
+<!-- HERO con imagen de Paloma -->
 <header class="hero">
-<img class="hero-img" src="https://palomapresidente.com.co/images/paloma-valencia-presidente-02.jpg" alt="Paloma Valencia" onerror="this.style.display='none'">
-<div class="hero-overlay">
-<img class="logo-img" src="https://palomapresidente.com.co/images/logo-paloma 2026.png" alt="Paloma 2026" onerror="this.style.display='none'">
-<h1>SEGURIDAD<em>TOTAL</em></h1>
-<div class="hero-slogan"><p>Autoridad y firmeza:<br>Colombia segura para el desarrollo</p></div>
-<p class="hero-promise">"Que vivir sin miedo sea una realidad" 2026-2030</p>
-</div>
+  <div class="hero-img-wrap">
+    <img class="hero-img" 
+         src="https://palomapresidente.com.co/images/paloma-valencia-presidente-02.jpg" 
+         alt="Paloma Valencia" 
+         id="heroImg"
+         onload="this.style.display='block'"
+         onerror="this.style.display='none';document.getElementById('imgPlaceholder').style.display='flex'">
+    <div class="hero-img-placeholder" id="imgPlaceholder" style="display:none">
+      <span>🇨🇴</span>
+    </div>
+  </div>
+  <div class="hero-overlay">
+    <img class="logo-img" 
+         src="https://palomapresidente.com.co/images/logo-paloma 2026.png" 
+         alt="Paloma 2026" 
+         onerror="this.style.display='none'">
+    <h1>SEGURIDAD<em>TOTAL</em></h1>
+    <div class="hero-slogan"><p>Autoridad y firmeza:<br>Colombia segura para el desarrollo</p></div>
+    <p class="hero-promise">"Que vivir sin miedo sea una realidad" 2026-2030</p>
+  </div>
 </header>
+
+<!-- NAV -->
 <nav class="nav-strip">
-<button class="nav-btn" onclick="document.getElementById('r1').scrollIntoView({behavior:'smooth'})"><span class="nb">💰</span>REDUCIR<br>INGRESOS</button>
-<button class="nav-btn" onclick="document.getElementById('r2').scrollIntoView({behavior:'smooth'})"><span class="nb">🛡️</span>ROBUSTECER<br>FUERZA</button>
-<button class="nav-btn" onclick="document.getElementById('r3').scrollIntoView({behavior:'smooth'})"><span class="nb">🤝</span>RE-ENAM.<br>COMUNID.</button>
-<button class="nav-btn" onclick="document.getElementById('r4').scrollIntoView({behavior:'smooth'})"><span class="nb">⚖️</span>RESTABLECER<br>LEGALIDAD</button>
+  <button class="nav-btn" onclick="scrollTo('r1')"><span class="nb">💰</span>REDUCIR<br>INGRESOS</button>
+  <button class="nav-btn" onclick="scrollTo('r2')"><span class="nb">🛡️</span>ROBUSTECER<br>FUERZA</button>
+  <button class="nav-btn" onclick="scrollTo('r3')"><span class="nb">🤝</span>RE-ENAM.<br>COMUNID.</button>
+  <button class="nav-btn" onclick="scrollTo('r4')"><span class="nb">⚖️</span>RESTABLECER<br>LEGALIDAD</button>
 </nav>
+
+<!-- INTRO -->
 <div class="plan-intro">
-<h2>Las Cuatro R - Vivir Sin Miedo</h2>
-<p>Un plan integral para que Colombia recupere la <strong>autoridad, el orden y la seguridad</strong> en todos sus territorios. Las 4R atacan simultáneamente las finanzas del crimen, la debilidad institucional y la pérdida de legitimidad estatal. <strong>Toca cada acción para ver las tareas esenciales.</strong></p>
+  <h2>Las Cuatro R - Vivir Sin Miedo</h2>
+  <p>Un plan integral para que Colombia recupere la <strong>autoridad, el orden y la seguridad</strong> en todos sus territorios. Las 4R atacan simultáneamente las finanzas del crimen, la debilidad institucional y la pérdida de legitimidad estatal. <strong>Toca cada acción para ver las tareas esenciales.</strong></p>
 </div>
+
+<!-- PROCESOS ORIENTADORES -->
+<div class="po-section" id="procesos">
+  <div class="po-title">⚙️ PROCESOS ORIENTADORES DEL MODELO</div>
+  <div class="po-tabs">
+    <button class="po-tab-btn po-active" onclick="showPO(0,this)">
+      <span class="po-icon">🛡️</span><span>PREVENCIÓN<br>DEL CRIMEN</span>
+    </button>
+    <button class="po-tab-btn" onclick="showPO(1,this)">
+      <span class="po-icon">⚔️</span><span>USO LEGÍTIMO<br>DE LA FUERZA</span>
+    </button>
+  </div>
+
+  <div class="po-content po-visible" id="po0">
+    <div class="po-subtitle">Proceso 1 — Prevención del crimen y todas las manifestaciones violentas</div>
+    <p class="po-desc">Estrategia de erosión social del delito. Busca activar a la sociedad como el primer anillo de seguridad del Estado, deslegitimando cultural y socialmente al criminal.</p>
+    <div class="po-comp">
+      <div class="po-comp-title">A. Corresponsabilidad y redes cívicas</div>
+      <p class="po-comp-text">Transformación cultural: la legalidad como único camino al éxito, erradicando la narcocultura. Activación de redes de cooperación comunitaria con la Fuerza Pública.</p>
+    </div>
+    <div class="po-comp">
+      <div class="po-comp-title">B. Sustitución productiva</div>
+      <p class="po-comp-text">Conversión del campesino cultivador de coca en socio de plantas industriales legales (aceite de aguacate, cacao, rones artesanales). Sustitución obligatoria con financiamiento estatal y cooperación internacional.</p>
+    </div>
+    <div class="po-comp">
+      <div class="po-comp-title">C. Prevención situacional</div>
+      <p class="po-comp-text">Recuperación del espacio público: iluminación, parques, cámaras y diseño urbano orientado a la prevención del delito (CPTED). Quitarle el territorio al microtráfico.</p>
+    </div>
+    <div class="po-comp">
+      <div class="po-comp-title">D. Redes cívicas con tecnología</div>
+      <p class="po-comp-text">Integración ciudadana con sistemas C4/C5: apps de reporte, botones de pánico, alertas tempranas, videovigilancia y redes coordinadas con la Policía Nacional.</p>
+    </div>
+    <div class="po-comp">
+      <div class="po-comp-title">E. Educación para la legalidad</div>
+      <p class="po-comp-text">Programas pedagógicos en instituciones educativas desde primera infancia. Principio: "el que la hace, la paga." Pedagogía práctica sobre costos del delito y beneficios de la legalidad.</p>
+    </div>
+  </div>
+
+  <div class="po-content" id="po1">
+    <div class="po-subtitle">Proceso 2 — Uso legítimo de la fuerza para la defensa de los ciudadanos</div>
+    <p class="po-desc">Ejercicio innegociable del monopolio de las armas por parte del Estado. Rechaza la negociación política con el crimen y se centra en la imposición del orden constitucional.</p>
+    <div class="po-comp">
+      <div class="po-comp-title">A. Enfrentar</div>
+      <p class="po-comp-text">Despliegue ofensivo para desarticular militar y financieramente a las estructuras criminales. Operaciones de alta intensidad, interdicción de rutas y neutralización de cabecillas.</p>
+    </div>
+    <div class="po-comp">
+      <div class="po-comp-title">B. Someter</div>
+      <p class="po-comp-text">El único fin legítimo de la fuerza es llevar al criminal ante la justicia. No hay diálogos de paz con estructuras delincuenciales: ELN, disidencias y Clan del Golfo deben someterse a la ley.</p>
+    </div>
+    <div class="po-comp">
+      <div class="po-comp-title">C. Seguridad jurídica del uniformado</div>
+      <p class="po-comp-text">Garantía de defensa técnica especializada y respaldo institucional para todo miembro de la Fuerza Pública que ejerza la autoridad en cumplimiento de su deber constitucional.</p>
+    </div>
+    <div class="po-comp">
+      <div class="po-comp-title">D. Bienestar moral del personal</div>
+      <p class="po-comp-text">Dignificación del soldado y policía: incentivos de vivienda, salud, educación para familias y reconocimiento social. Recuperar la moral combativa y el orgullo institucional.</p>
+    </div>
+    <div class="po-comp">
+      <div class="po-comp-title">E. Mando unificado</div>
+      <p class="po-comp-text">Centralización operativa bajo comando único para que el Estado mande con una sola voz en todo el territorio, eliminando fragmentación institucional.</p>
+    </div>
+  </div>
+</div>
+
+<!-- R1 -->
 <section class="rs r1" id="r1">
 <div class="rb" data-n="R1"><span class="rtag">R - 01</span><h2 class="rtit">💰 REDUCIR<br>INGRESOS DE<br>LOS ILEGALES</h2><p class="rdesc">Golpe a sus finanzas. Sin rentas ilegales no existe poder criminal sostenible.</p></div>
 <div class="rpr"><p><strong>Principio rector:</strong> "Sin rentas ilegales no existe poder criminal capaz de desafiar de forma sostenida la autoridad del Estado."</p></div>
@@ -251,6 +368,8 @@ footer strong{color:var(--gold)}
 </div>
 </div></section>
 <div class="rdiv"></div>
+
+<!-- R2 -->
 <section class="rs r2" id="r2">
 <div class="rb" data-n="R2"><span class="rtag">R - 02</span><h2 class="rtit">🛡️ ROBUSTECER<br>LAS FUERZAS<br>MILITARES Y POLICÍA</h2><p class="rdesc">Plan Colombia 2.0. Equipamiento, inteligencia y seguridad jurídica para el uniformado.</p></div>
 <div class="rpr"><p><strong>Principio rector:</strong> "Sin una Fuerza Pública con superioridad estratégica, respaldo jurídico y claridad doctrinal, el Estado pierde el control del territorio y el crimen impone su ley."</p></div>
@@ -275,22 +394,23 @@ footer strong{color:var(--gold)}
 <div class="td"><div class="dot"></div><p class="tx">Desarrollar plataformas tecnológicas de apoyo a la toma de decisiones estratégicas.</p></div>
 </div></div>
 </div><div class="aw">
-<button class="ah" onclick="toggle(this)"><span class="an">2.3</span><span class="at">Implementar estrategia internacional de seguridad - Plan Colombia 2.0</span><span class="aa">▼</span></button>
+<button class="ah" onclick="toggle(this)"><span class="an">2.3</span><span class="at">Implementar estrategia de seguridad con el Nuevo Plan Colombia 2.0</span><span class="aa">▼</span></button>
 <div class="ab"><div class="ti"><span class="tl">Tareas esenciales</span>
 <div class="td"><div class="dot"></div><p class="tx">Fortalecer cooperación internacional en lucha contra crimen organizado transnacional.</p></div>
 <div class="td"><div class="dot"></div><p class="tx">Participar activamente en iniciativas multilaterales de seguridad.</p></div>
 <div class="td"><div class="dot"></div><p class="tx">Promover acuerdos internacionales para combatir economías ilícitas.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Fortalecer intercambio de experiencias con países aliados en seguridad.</p></div>
 <div class="td"><div class="dot"></div><p class="tx">Posicionar a Colombia como actor relevante en cooperación internacional contra el crimen.</p></div>
 </div></div>
 </div><div class="aw">
-<button class="ah" onclick="toggle(this)"><span class="an">2.4</span><span class="at">Fortalecer la seguridad jurídica del personal</span><span class="aa">▼</span></button>
+<button class="ah" onclick="toggle(this)"><span class="an">2.4</span><span class="at">Fortalecer la seguridad jurídica del personal de la Fuerza Pública</span><span class="aa">▼</span></button>
 <div class="ab"><div class="ti"><span class="tl">Tareas esenciales</span>
 <div class="td"><div class="dot"></div><p class="tx">Ampliar los mecanismos de defensa jurídica para miembros de la Fuerza Pública en todas las acciones del servicio.</p></div>
 <div class="td"><div class="dot"></div><p class="tx">Establecer lineamientos claros de actuación operativa conforme al DIH y los Derechos Humanos.</p></div>
 <div class="td"><div class="dot"></div><p class="tx">Fortalecer la capacitación jurídica del personal en el marco legal de las operaciones.</p></div>
 </div></div>
 </div><div class="aw">
-<button class="ah" onclick="toggle(this)"><span class="an">2.5</span><span class="at">Actualizar la doctrina y los procesos de capacitación profesional</span><span class="aa">▼</span></button>
+<button class="ah" onclick="toggle(this)"><span class="an">2.5</span><span class="at">Actualizar doctrina y capacitación profesional</span><span class="aa">▼</span></button>
 <div class="ab"><div class="ti"><span class="tl">Tareas esenciales</span>
 <div class="td"><div class="dot"></div><p class="tx">Actualizar la doctrina militar y policial frente a amenazas criminales contemporáneas.</p></div>
 <div class="td"><div class="dot"></div><p class="tx">Incorporar lecciones aprendidas de operaciones contra organizaciones criminales.</p></div>
@@ -299,15 +419,15 @@ footer strong{color:var(--gold)}
 <div class="td"><div class="dot"></div><p class="tx">Actualizar permanentemente los programas de capacitación frente a nuevas amenazas.</p></div>
 </div></div>
 </div><div class="aw">
-<button class="ah" onclick="toggle(this)"><span class="an">2.6</span><span class="at">Crear carrera especial para incorporar oficiales retirados en roles asesores al Estado</span><span class="aa">▼</span></button>
+<button class="ah" onclick="toggle(this)"><span class="an">2.6</span><span class="at">Incorporar retirados en roles de asesores estratégicos al Estado</span><span class="aa">▼</span></button>
 <div class="ab"><div class="ti"><span class="tl">Tareas esenciales</span>
 <div class="td"><div class="dot"></div><p class="tx">Aprovechar la experiencia del personal retirado en labores de asesoría institucional.</p></div>
 <div class="td"><div class="dot"></div><p class="tx">Integrar conocimiento acumulado de oficiales retirados en procesos de formación.</p></div>
 <div class="td"><div class="dot"></div><p class="tx">Fortalecer el vínculo institucional con la reserva activa de la Fuerza Pública.</p></div>
-<div class="td"><div class="dot"></div><p class="tx">Incorporar personal de las reservas activas como asesores activos en la orientación de la toma de decisiones.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Incorporar personal de las reservas activas en roles estratégicos como asesores en la toma de decisiones.</p></div>
 </div></div>
 </div><div class="aw">
-<button class="ah" onclick="toggle(this)"><span class="an">2.7</span><span class="at">Fortalecer capacidades estratégicas y disuasivas del Estado mediante cooperación internacional</span><span class="aa">▼</span></button>
+<button class="ah" onclick="toggle(this)"><span class="an">2.7</span><span class="at">Fortalecer capacidades estratégicas y disuasivas mediante cooperación internacional</span><span class="aa">▼</span></button>
 <div class="ab"><div class="ti"><span class="tl">Tareas esenciales</span>
 <div class="td"><div class="dot"></div><p class="tx">Fortalecer intercambio de buenas prácticas en operaciones contra crimen organizado.</p></div>
 <div class="td"><div class="dot"></div><p class="tx">Incrementar capacidades conjuntas de entrenamiento y preparación operativa.</p></div>
@@ -316,13 +436,13 @@ footer strong{color:var(--gold)}
 </div><div class="aw">
 <button class="ah" onclick="toggle(this)"><span class="an">2.8</span><span class="at">Desarrollar y proyectar capacidades de disuasión estratégica frente a amenazas externas e internas</span><span class="aa">▼</span></button>
 <div class="ab"><div class="ti"><span class="tl">Tareas esenciales</span>
-<div class="td"><div class="dot"></div><p class="tx">Crear un Comando Conjunto de Ciberseguridad a nivel del Ministerio Nacional de Defensa.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Crear un Comando Conjunto de Ciberseguridad a nivel de Ministerio Nacional de Defensa.</p></div>
 <div class="td"><div class="dot"></div><p class="tx">Activación del Centro de Inteligencia Artificial al nivel del Ministerio de Defensa Nacional.</p></div>
 <div class="td"><div class="dot"></div><p class="tx">Fortalecer las capacidades disuasivas para preservar la soberanía nacional e integridad territorial.</p></div>
 <div class="td"><div class="dot"></div><p class="tx">Fortalecer la capacidad de respuesta frente a amenazas a la seguridad nacional.</p></div>
 </div></div>
 </div><div class="aw">
-<button class="ah" onclick="toggle(this)"><span class="an">2.9</span><span class="at">Restablecer y fortalecer convenios de cooperación con Israel, EE.UU., Ecuador y Corea del Sur</span><span class="aa">▼</span></button>
+<button class="ah" onclick="toggle(this)"><span class="an">2.9</span><span class="at">Restablecer y fortalecer convenios de cooperación con aliados estratégicos</span><span class="aa">▼</span></button>
 <div class="ab"><div class="ti"><span class="tl">Tareas esenciales</span>
 <div class="td"><div class="dot"></div><p class="tx">Suscribir convenios bilaterales de cooperación en seguridad, defensa e inteligencia con Israel, Estados Unidos, Ecuador y Corea del Sur.</p></div>
 <div class="td"><div class="dot"></div><p class="tx">Desarrollar programas conjuntos de entrenamiento operativo y transferencia tecnológica con fuerzas aliadas.</p></div>
@@ -331,6 +451,8 @@ footer strong{color:var(--gold)}
 </div>
 </div></section>
 <div class="rdiv"></div>
+
+<!-- R3 -->
 <section class="rs r3" id="r3">
 <div class="rb" data-n="R3"><span class="rtag">R - 03</span><h2 class="rtit">🤝 RE-ENAMORAR<br>A LAS<br>COMUNIDADES</h2><p class="rdesc">Ingresos dignos, sustitución de cultivos, seguridad ciudadana y protección a la mujer.</p></div>
 <div class="rpr"><p><strong>Principio rector:</strong> "Sin confianza ciudadana y sin cooperación estratégica, la seguridad es frágil y transitoria."</p></div>
@@ -516,6 +638,8 @@ footer strong{color:var(--gold)}
 </div>
 </div></section>
 <div class="rdiv"></div>
+
+<!-- R4 -->
 <section class="rs r4" id="r4">
 <div class="rb" data-n="R4"><span class="rtag">R - 04</span><h2 class="rtit">⚖️ RESTABLECER<br>LA<br>LEGALIDAD</h2><p class="rdesc">Todos los criminales y corruptos van a la cárcel. Donde no gobierna la ley, gobierna el crimen.</p></div>
 <div class="rpr"><p><strong>Principio rector:</strong> "Donde no gobierna la ley, gobierna el crimen."</p></div>
@@ -536,6 +660,7 @@ footer strong{color:var(--gold)}
 <div class="td"><div class="dot"></div><p class="tx">Priorizar investigación judicial de delitos asociados a economías criminales.</p></div>
 <div class="td"><div class="dot"></div><p class="tx">Fortalecer capacidades investigativas de fiscalía frente a estructuras criminales.</p></div>
 <div class="td"><div class="dot"></div><p class="tx">Fortalecer coordinación entre investigación criminal y procesos judiciales.</p></div>
+<div class="td"><div class="dot"></div><p class="tx">Fortalecer mecanismos de seguimiento a procesos judiciales contra organizaciones criminales.</p></div>
 <div class="td"><div class="dot"></div><p class="tx">Fortalecer análisis criminal para priorización de casos de alto impacto.</p></div>
 </div></div>
 </div><div class="aw">
@@ -609,12 +734,61 @@ footer strong{color:var(--gold)}
 </div></div>
 </div>
 </div></section>
+
 <footer>
-<img src="https://palomapresidente.com.co/images/logo-paloma 2026.png" alt="Paloma 2026" onerror="this.style.display='none'">
-<p><strong>Seguridad Total - Las Cuatro R - Vivir Sin Miedo</strong><br>Autoridad y Firmeza: Colombia Segura para el Desarrollo 2026-2030<br>palomapresidente.com.co</p>
+  <img src="https://palomapresidente.com.co/images/logo-paloma 2026.png" alt="Paloma 2026" onerror="this.style.display='none'">
+  <p><strong>Seguridad Total - Las Cuatro R - Vivir Sin Miedo</strong><br>Autoridad y Firmeza: Colombia Segura para el Desarrollo 2026-2030<br>palomapresidente.com.co</p>
 </footer>
+
 <script>
-function toggle(btn){btn.closest(".aw").classList.toggle("open")}
+// Scroll suave compatible con iOS
+function scrollTo(id){
+  var el = document.getElementById(id);
+  if(el){
+    var top = el.getBoundingClientRect().top + window.pageYOffset - 10;
+    window.scrollTo({top: top, behavior: 'smooth'});
+  }
+}
+
+// Accordion — compatible con todos los móviles
+function toggle(btn){
+  var aw = btn.closest(".aw");
+  var isOpen = aw.classList.contains("open");
+  // Cerrar todos los abiertos en la misma lista
+  var siblings = aw.parentElement.querySelectorAll(".aw.open");
+  siblings.forEach(function(s){ if(s !== aw) s.classList.remove("open"); });
+  aw.classList.toggle("open", !isOpen);
+}
+
+// Procesos Orientadores tabs
+function showPO(idx, btn){
+  document.querySelectorAll(".po-content").forEach(function(c){ c.classList.remove("po-visible"); });
+  document.querySelectorAll(".po-tab-btn").forEach(function(b){ b.classList.remove("po-active"); });
+  document.getElementById("po" + idx).classList.add("po-visible");
+  btn.classList.add("po-active");
+}
+
+// Intentar cargar imagen de Paloma con proxy de imágenes alternativas
+(function(){
+  var img = document.getElementById('heroImg');
+  if(!img) return;
+  var tries = [
+    'https://palomapresidente.com.co/images/paloma-valencia-presidente-02.jpg',
+    'https://palomapresidente.com.co/images/paloma-valencia-presidente-01.jpg'
+  ];
+  var i = 0;
+  img.onerror = function(){
+    i++;
+    if(i < tries.length){
+      img.src = tries[i];
+    } else {
+      img.style.display = 'none';
+      var ph = document.getElementById('imgPlaceholder');
+      if(ph) ph.style.display = 'flex';
+    }
+  };
+  img.src = tries[0];
+})();
 </script>
 </body>
 </html>
