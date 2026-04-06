@@ -122,10 +122,10 @@ footer strong{color:var(--gold)}
 
 <!-- NAV -->
 <nav class="nav-strip">
-  <button class="nav-btn" onclick="scrollTo('r1')"><span class="nb">💰</span>REDUCIR<br>INGRESOS</button>
-  <button class="nav-btn" onclick="scrollTo('r2')"><span class="nb">🛡️</span>ROBUSTECER<br>FUERZA</button>
-  <button class="nav-btn" onclick="scrollTo('r3')"><span class="nb">🤝</span>RE-ENAM.<br>COMUNID.</button>
-  <button class="nav-btn" onclick="scrollTo('r4')"><span class="nb">⚖️</span>RESTABLECER<br>LEGALIDAD</button>
+  <button class="nav-btn" onclick="scrollToSection('r1')"><span class="nb">💰</span>REDUCIR<br>INGRESOS</button>
+  <button class="nav-btn" onclick="scrollToSection('r2')"><span class="nb">🛡️</span>ROBUSTECER<br>FUERZA</button>
+  <button class="nav-btn" onclick="scrollToSection('r3')"><span class="nb">🤝</span>RE-ENAM.<br>COMUNID.</button>
+  <button class="nav-btn" onclick="scrollToSection('r4')"><span class="nb">⚖️</span>RESTABLECER<br>LEGALIDAD</button>
 </nav>
 
 <!-- INTRO -->
@@ -819,7 +819,7 @@ footer strong{color:var(--gold)}
 
 <script>
 // Scroll suave compatible con iOS
-function scrollTo(id){
+function scrollToSection(id){
   var el = document.getElementById(id);
   if(el){
     var top = el.getBoundingClientRect().top + window.pageYOffset - 10;
